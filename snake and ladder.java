@@ -31,7 +31,7 @@ public class Main
             s1+=30;
             
             //condition for snakes
-            if(s1==98)
+            else if(s1==98)
             s1-=90;
             else if(s1==84)
             s1-=60;
@@ -41,11 +41,16 @@ public class Main
             s1-=21;
             else if(s1==30)
             s1-=25;
+            //to check the score
             
-            System.out.println("player1 score:"+s1);
-            if(s1==100){
+            else if(s1==100){
                 System.out.println("winner");
+                break;
             }
+            else if(s1>100){
+                s1=s1-dice;
+            }
+            System.out.println("player 1 Score"+s1);
             
           }
           else if(a==p2)
@@ -66,7 +71,7 @@ public class Main
             s2+=30;
             
             //condition for snakes
-            if(s2==98)
+            else if(s2==98)
             s2-=90;
             else if(s2==84)
             s2-=60;
@@ -77,11 +82,15 @@ public class Main
             else if(s2==30)
             s2-=25;
             
-            System.out.println("player1 score:"+s2);
-            if(s2==100)
-            {
+           
+            else if(s2==100){
                 System.out.println("winner");
+                break;
             }
+            else if(s2>100){
+                s2=s2-dice;
+            }
+             System.out.println("player 2 Score"+s2);
           }
         }
     }
